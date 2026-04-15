@@ -1,0 +1,15 @@
+---
+Connection: Los Alamos National Lab
+---
+- Really good benefits (good money)
+- Global security does a lot of simulation
+    - Radiation sims
+    - Weapons sims (hydro codes)
+- Very easy to get dragged into working for free with overtime on a salary
+- Los alamos is tiny
+- Could potentially WFM some days dependign on how classified the work is
+- He’ll follow up with people more inline with what I want to do
+- Hard to leave once you get there (golden handcuffs)
+- Late 20s to early 30s and the late 50s to early 60s
+- Been a bit more tight with less federal sponsors but not as bad
+- High job security

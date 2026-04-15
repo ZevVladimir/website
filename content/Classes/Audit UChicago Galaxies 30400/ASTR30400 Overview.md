@@ -1,0 +1,2 @@
+- [ ] #TODO Galaxies HW 2  [due:: 2026-04-16]
+- https://galaxiesbook.org/

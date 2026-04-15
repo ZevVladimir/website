@@ -1,0 +1,58 @@
+---
+tags: [stars, radiation, equation]
+aliases: [RTE, Radiative transfer equation, Radiative transport equation]
+---
+- Different forms 
+	- $dI_{\nu}(s)=I_{\nu}(s+ds)-I_{\nu}(s)=j_{\nu}(s)ds-\alpha_{\nu}(s)I_{\nu}(s)ds$
+		- Shows that photons do not decay spontaneously
+	- $\dfrac{dI_{\nu}}{ds}=j_{\nu}-\alpha_{\nu}I_{\nu}$
+	- $\dfrac{dI_{\nu}}{\alpha_{\nu}ds}=S_{\nu}-I_{\nu}$
+	- Integral form: $I_{\nu}(\tau_{\nu})=I_{\nu}(0)e^{-\tau_{\nu}}+\int_{0}^{\tau_{\nu}}S_{\nu}(t_{\nu})e^{-(\tau_{\nu}-t_{\nu})}dt_{\nu}$  
+	- Standard plane-parallel transport equation: $\mu  \dfrac{dI_{\nu}}{d\tau_{\nu}}=I_{\nu}-S_{\nu}$
+	- Where
+		- $s$ is measured along beam in propagation direction
+		- $I_{\nu}$ is the [[Intensity (specific, mean)|specific intensity]]
+		-  $j_{\nu}$ is the [[Emissivity]]
+		- $\alpha_{\nu}$ is the [[Monochromatic extinction coefficient]] per cm path length
+		- $S_{\nu}$ is the [[Source function]]
+		- $\tau_{\nu}$ is the [[Optical depth]]
+		- $\mu$ is the [[Viewing angle]]
+- Intensity along a ray does not change unless photons are added to the beam or taken away from it
+- **Optically thick $\tau_{\nu}\gg1$** $I_{\nu}=S_{\nu}$
+- **Optically thin** $\tau_{\nu}\ll1$ $I_{\nu,0}=0$ $I_{\nu}=I_{0}S_{\nu}$
+- $Stars$ $\tau_{\nu}\ll1$ $I_{\nu,0}\neq0$ $I_{\nu}=I_{\nu_{0}}+\tau_{\nu}(S_{\nu}-I_{\nu,0})$
+### Solution 
+- For inward directed intensity $(\mu<0)$
+	- $I_{\nu}^-(\tau_{\nu},\mu)=-\int_{0}^{\tau_{\nu}}S_{\nu}(t_{\nu})e^{-1t_{\nu}-\tau_{\nu}/\mu}dt_{\nu}/\mu$
+- For outward directed intensity $(\mu>0)$
+	- $I_{\nu}^+(\tau_{\nu},\mu)=+\int_{\tau_{\nu}}^\infty S_{\nu}(t_{\nu})e^{-(t_{\nu}-\tau_{\nu})/\mu}dt_{\nu}/\mu$
+		- $t_{\nu}$ is a dummy variable in class was $\tau'_{\nu}$
+### Eddington-Barbier Approximation
+- Emergent intensity at stellar surface $(\tau_{\nu}=0,\mu>0)$
+	- $I_{\nu}^+(\tau_{\nu}=0,\mu)=\int_{0}^\infty S_{\nu}(t_{\nu})e^{-t_{\nu}/\mu}dt_{\nu}/\mu$
+- Using
+	- $S_{\nu}(\tau_{\nu})=\sum_{n=0}^{\infty}a_{n}\tau_{\nu}^n=a_{0}+a_{1}\tau_{\nu}+a_{2}\tau_{\nu}^{2}+\dots+a_{n}\tau_{\nu}^n$
+	- $\int_{0}^\infty x^n\exp(-x)dx=n!$
+- Get $I_{\nu}^+(\tau_{\nu}=0,\mu)a_{0}+a_{1}\mu+2a_{2}\mu^{2}+\dots+n!a_{n}\mu^n$
+- Then $I_{\nu}^+(\tau_{\nu}=0,\mu)\approx S_{\nu}(\tau_{\nu}=\mu)$
+	- This is exact when $S_{\nu}$ varies linearly with $\tau_{\nu}$
+- Also $\mathcal{F}_{\nu}^+(0)\approx \pi S_{\nu}(\tau_{\nu}=\dfrac{2}{3})$
+### Grey Approximation
+- Drop all dependencies on $\nu$
+- Radiative equilibrium
+- Consider a layer with $F^+$ going up and $F^-$ going down
+- $F^{+}-F^-=F_{0}$ and $\dfrac{dF}{d\tau}=0$
+- $\mu  \dfrac{dI(\tau,\mu)}{d\tau}=I(\tau,\mu)-S(\tau)$
+- The 0th moment
+	- $\int \mu  \dfrac{dI}{d\tau}d\Omega=\int Id\Omega-\int Sd\Omega$
+	- $\dfrac{d}{d\tau}\int \mu Id\Omega=4\pi j-r\pi S$
+	- $\dfrac{dF}{d\tau}=4\pi J-4\pi S=0$
+	- So $J=S$ where $J$ is the [[Intensity (specific, mean)|mean intensity]] and $S$ is the [[Source function]]
+- The 1st moment
+	- $\int \mu^{2}  \dfrac{dI}{d\tau}d\Omega=\int \mu Id\Omega-\int \mu Sd\Omega$
+	- $\dfrac{d}{d\tau}\int \mu^{2}Id\Omega=F-S\int \mu d\Omega$ where $F$ is a constant
+		- $\int \mu^{2}Id\Omega=cP$ or the pressure 
+		- $S\int \mu d\Omega$ goes to 0
+	- $c \dfrac{dP}{d\tau}=F_{0}$
+	- $P=\dfrac{1}{c}F_{0}\tau+\mathrm{const}$
+	- 

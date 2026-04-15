@@ -1,0 +1,32 @@
+---
+tags: [App, Coding, Personal]
+Created: 2025-05-11T16:08
+Status: Brainstorming
+---
+- Goals
+    - Foster community interaction
+    - Break down the initial difficulty of going out and speaking to people
+    - Create an alternative to organized religion as a way which is easy for people to come together and interact socially and have a common goal
+- Gamify community interactions?
+    - Medals/awards for attending events or for setting up events
+    - Gain “community points”
+        - Reach certain levels
+        - Scale by community population
+    - Hard limit to direct community
+    - Community missions
+    - Event feed with reactions
+    - Tagging of events
+- Time commitment
+    - Easy integration with calendars
+    - Clearly lay out time commitment
+- People limit?
+    - For events with limited resources this might be necessary…
+    - At least some sort of RSVP method if desired
+- Moderation
+    - How to ensure safety of members at meetups
+    - Prevent bot accounts/people taking advantage of others
+    - Block/reporting system
+    - Panic/safety button
+    - Buddy system
+    - Public spaces
+- Need some overarching long term goal or purpose

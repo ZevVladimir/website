@@ -1,0 +1,33 @@
+- Deep cover 
+- A Jazzman's Blues
+- Alice in Borderland
+- Barbarians
+- Black Swan
+- Blade Runner
+- Chennai Express
+- Cyberpunk - Edgrunners
+- El Internado
+- Gone Girl
+- Insatiable
+- Lupin
+- Mars
+- Moonlight
+- Morocco
+- National Treasure
+- Punisher
+- Sacred Games
+- Stranger Things
+- The Irishman
+- The Prestige
+- The Quiz lady
+- There will be Blood
+- Toscana
+- Undone
+- Wandavision
+- Wheel of Time
+- Whiplash
+- The Curious Case of Benjamin Button
+- Tenet
+- Train to Busan
+- Groundhog day
+- The upside

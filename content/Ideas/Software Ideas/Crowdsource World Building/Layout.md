@@ -1,0 +1,24 @@
+- Main page
+    - Create project
+    - Existing projects
+    - Find project
+    - Profile
+    - Menu
+- Current project
+    - Storyboard
+        - Timeline with multiple stories
+- Story (All of this is non editable)
+    - Writing
+    - Maps
+    - Characters
+    - Relationships
+    - Items
+    - Magic
+    - Research
+- Clone either one specific section of Story to computer or all
+    - This is now editable on device
+    - Edits are made
+    - Submitted back to site
+    - What edits are made are shown
+    - Then approved to actually show up on the project’s Story
+        - Can be adjusted so some people don’t have to be approved, everyone does, no one does

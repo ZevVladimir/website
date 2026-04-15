@@ -1,0 +1,51 @@
+- [ ] United States
+	- [ ] Wisconsin
+		- [ ] Devils Lake
+		- [ ] Wisconsin Dells
+	- [x] Puerto Rico
+		- [ ] Hot Springs
+		- [x] Old San Juan
+		- [ ] Bioluminescent Bay
+		- [x] Coffee Farm
+		- [x] El Yunque
+	- [ ] Georgia
+		- [ ] Atlanta
+	- [x] West Virginia
+	- [ ] New Mexico
+	- [ ] Yellowstone
+	- [ ] Yosemite
+	- [ ] Redwood Forest
+	- [ ] Alaska
+	- [ ] New Orleans
+- [ ] Chile
+- [ ] Brazil
+- [ ] Mexico
+	- [ ] Mexico City 
+	- [ ] Mayan ruins
+- [ ] Colombia
+- [ ] Japan
+- [ ] Germany
+- [ ] Morocco
+- [ ] Tanzania
+- [ ] New Zealand
+- [ ] India
+- [ ] China
+- [ ] Russia
+- [ ] Vietnam
+- [ ] Cambodia 
+	- [ ] Angkor Wat
+- [ ] Poland
+- [x] Greece
+	- [ ] Crete
+	- [ ] Thessaloniki 
+	- [x] Athens
+- [x] Italy
+	- [ ] Naples
+	- [x] Milan
+	- [x] Rome
+	- [x] Venice
+	- [ ] Florence
+- [x] France
+	- [x] Paris
+	- [x] Rouen
+	- [ ] 

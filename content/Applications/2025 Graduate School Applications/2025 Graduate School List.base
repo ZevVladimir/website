@@ -1,0 +1,143 @@
+views:
+  - type: table
+    name: All Phds
+    filters:
+      and:
+        - file.inFolder("Applications/2025 Graduate School Applications/Grad Schools 2025")
+        - '!file.name.endsWith("base")'
+        - Status != "Cut"
+        - note["Type of Program"].contains("PhD")
+    order:
+      - file.name
+      - Gross Salary
+      - Net Salary
+      - Result
+      - Location
+      - Portal Link
+      - Type of Program
+      - Sarika Applying
+    sort:
+      - property: Salary
+        direction: DESC
+      - property: Status
+        direction: DESC
+      - property: Salary after tax
+        direction: DESC
+      - property: Result
+        direction: ASC
+      - property: Deadline
+        direction: ASC
+      - property: file.name
+        direction: ASC
+    columnSize:
+      note.Gross Salary: 116
+      note.Net Salary: 103
+      note.Result: 105
+      note.Location: 127
+      note.Portal Link: 162
+      note.Type of Program: 126
+      note.Sarika Applying: 136
+  - type: table
+    name: All Phds Remaining
+    filters:
+      and:
+        - file.inFolder("Applications/2025 Graduate School Applications/Grad Schools 2025")
+        - '!file.name.endsWith("base")'
+        - Status != "Cut"
+        - note["Type of Program"].contains("PhD")
+        - Status != "Submitted"
+    order:
+      - file.name
+      - Status
+      - Deadline
+      - Location
+      - Portal Link
+      - Type of Program
+      - Application Fee
+      - Sarika Applying
+      - Result
+    sort:
+      - property: Deadline
+        direction: ASC
+      - property: file.name
+        direction: ASC
+      - property: Result
+        direction: ASC
+    columnSize:
+      note.Status: 72
+      note.Deadline: 102
+      note.Location: 127
+      note.Portal Link: 154
+      note.Type of Program: 126
+      note.Application Fee: 128
+  - type: table
+    name: Sarika Match
+    filters:
+      and:
+        - file.inFolder("Applications/2025 Graduate School Applications/Grad Schools 2025")
+        - note["Sarika Applying"] != "No"
+        - '!file.name.endsWith("base")'
+        - Status != "Cut"
+    order:
+      - file.name
+      - Status
+      - Deadline
+      - Location
+      - Portal Link
+      - Type of Program
+      - Application Fee
+      - Sarika Applying
+      - Result
+  - type: table
+    name: Sarika No Match
+    filters:
+      and:
+        - file.inFolder("Applications/2025 Graduate School Applications/Grad Schools 2025")
+        - note["Sarika Applying"] == "No"
+        - '!file.name.endsWith("base")'
+        - Status != "Cut"
+        - '!note["Type of Program"].contains("Masters")'
+    order:
+      - file.name
+      - Status
+      - Deadline
+      - Location
+      - Portal Link
+      - Type of Program
+      - Application Fee
+      - Sarika Applying
+      - Result
+    sort:
+      - property: Deadline
+        direction: ASC
+      - property: Result
+        direction: ASC
+  - type: table
+    name: All schools
+    filters:
+      and:
+        - file.inFolder("Applications/2025 Graduate School Applications/Grad Schools 2025")
+        - '!file.name.endsWith("base")'
+        - Status != "Cut"
+    order:
+      - file.name
+      - Status
+      - Deadline
+      - Location
+      - Portal Link
+      - Type of Program
+      - Application Fee
+      - Sarika Applying
+      - Result
+    sort: []
+    columnSize:
+      note.Location: 132
+      note.Portal Link: 95
+      note.Type of Program: 146
+  - type: table
+    name: Cut Schools
+    filters:
+      and:
+        - file.inFolder("Applications/2025 Graduate School Applications/Grad Schools 2025")
+        - '!file.path.endsWith("base")'
+        - Status == "Cut"

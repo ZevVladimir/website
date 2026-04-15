@@ -1,0 +1,1 @@
+The ritual was complete, the flower fully grown, an enormous construction that filled the eye in its 

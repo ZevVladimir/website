@@ -1,0 +1,36 @@
+---
+Connection: Rutgers MS Computational Bio
+---
+- He doesn’t live in camden
+    - Camden not super exciting but there is the train that goes straight to philly
+    - Very strong commuting campus (especially for grad students)
+    - There are some CCIB activities but not a lot of grad activities
+- Life in the lab
+    - There are seminars each week
+    - Primarily see your cohort and not that much else
+    - How often are meetings?
+        - There is a lab meeting weekly
+        - For your project depends but generally once a week and with whoever you need to
+        - Interact primarily with lab members more
+    - Would definitely get my name on papers (bennedetto gets papers out and projects go out)
+    
+- As someone with pure math background how was the transition?
+- Why did you choose this program?
+    - Had already been working with Bennedetto before
+    - program does a good job of being interdisciplinary
+- Their lab specifically:
+    - They aren’t super connected with bio
+    - Did work with COVID and the spread of it
+    - Do a lot of modeling (diff eqtns) of what people do (e.g. getting sick)
+    - Optimal control theory
+    - Basically just minimize costs
+    - Metabolic pathway modeling
+        - Where medicine in the body goes
+        - What combinations of drugs work well together
+        - Diff eq but also graph theory
+        - Interpreting biology as graph theory
+    - Model a city and how travel and that sort of thing impacts epidemics
+        - Machine learning project
+        - Match to see who actually got sick
+    - Modeling traffic with autonomous vehicles
+    - Bunch of other biology parts as well (cancer etc)

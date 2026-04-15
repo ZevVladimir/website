@@ -1,0 +1,1 @@
+I have experience from my advanced physics lab courses using optical equipment and setting up optical experiments to study light. I have also used vacuum chambers, data acquisition systems, photon detectors, and electric circuits.

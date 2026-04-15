@@ -1,0 +1,3 @@
+[https://medium.com/@prathameshsonawane/xgboost-how-does-this-work-e1cae7c5b6cb](https://medium.com/@prathameshsonawane/xgboost-how-does-this-work-e1cae7c5b6cb)
+
+[https://seanzhang-data.medium.com/boosting-techniques-for-machine-learning-xgboost-for-regression-and-classification-507376eedd6f](https://seanzhang-data.medium.com/boosting-techniques-for-machine-learning-xgboost-for-regression-and-classification-507376eedd6f)

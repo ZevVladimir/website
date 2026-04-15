@@ -1,0 +1,11 @@
+---
+Connection: Sandia Lab
+---
+- Programs for students in graduate programs require a lot of time
+    - He did it but his masters definitely suffered
+    - Can see if there is a way to connect the two of them?
+    - Or if you’re alright not focusing as much on the Masters…
+- Email the recruiter listed in the job postings
+- Clearance can take a while so look for jobs where it is not required
+- Since it is late in the cycle odds are won’t be able to start until somewhat later
+- Funding general would be secured for anything that is currently posted especially if it is only 1-2 years

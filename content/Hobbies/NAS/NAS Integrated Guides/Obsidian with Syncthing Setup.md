@@ -1,0 +1,21 @@
+## General Setup
+- Install syncthing: https://syncthing.net/downloads/
+- On the NAS create a dataset for Obsidian notes to be stored
+	- /mnt/main_data/obsidianVaults for me
+- Install syncthing app on truenas web ui
+	- Check host network
+	- Under "Storage Configuration"
+		- Host Path is set to the dataset (/mnt/main_data/obsidianVaults)
+	- Add additional storage
+		- Mount path set to /data/obsidianVaults
+		- Host Path again set to the dataset (/mnt/main_data/obsidianVaults)
+- Got to the webportal for sycnthing
+	- For the nas portion do it through the the app and then click web ui
+	- For any other device you are on go to localhost:8384 once it is up and running
+- Create a local folder for the vault to connect to I did:
+	- Linux: ~/Obsidian/
+	- Windows: c:\Users\zevvl\Obsidian
+- On the syncthing web ui connect to the NAS with its Device ID (KU4IARR-FJUBPGM-S5SPXUG-6ELW65W-AFEKDS4-N6AYMDP-27LQQ4O-TGMGZQW)
+	- In bottom right add remote device and use the ID
+	- Check introducer
+- Accept the connection request on the NAS

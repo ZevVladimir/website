@@ -1,0 +1,13 @@
+- Beanbag chair/love sac
+- Big whiteboard
+- Bookshelf
+- Roomba 
+- TV
+- Remote control drop down shelves
+- Sound setup
+- Nice mattress with cooling/heating zone
+- Boardgame table
+	- Projector 
+	- Drawers
+	- Converts to normal
+- New Mexican potter 6

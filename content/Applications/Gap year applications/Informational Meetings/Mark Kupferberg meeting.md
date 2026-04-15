@@ -1,0 +1,49 @@
+---
+Connection: Kepco
+---
+- **For someone interested in working at the intersection of hardware, energy systems, and applied engineering, what types of roles or companies would you recommend looking into?**
+- **When it comes to innovation in power electronics or power supply design, where do you see the most excitement or R&D activity happening?**
+    - Some are application driven
+    - New technology develops
+    - Design their own transformers otherwise mainly use other components
+- **What kinds of companies typically purchase Kepco’s products, and what are some of the main applications they use them for?**
+- **What are some of the biggest trends or shifts you’ve seen in your customers’ needs over the past few years?**
+- **I’m interested in the power demands of aerospace and high-performance computing systems. Which of these sectors do you see driving the most innovation or demand for specialized power supplies?**
+- **What challenges do aerospace or computing companies typically face when sourcing power systems — is it more about precision, reliability, weight, integration, or something else?**
+- **In high-performance computing environments, are there specific trends — like AI workloads or edge computing — that are influencing the kinds of power solutions companies are looking for?**
+    - Magnets used in AI computers that require cryogenics
+    - Used for all the development and initial building of components and testing
+- **Do aerospace and computing companies typically have in-house teams managing their power systems, or do they rely on external partners for integration and support?**
+- **From your perspective, are there particular types of companies — maybe satellite makers, avionics firms, or data center providers — that are really pushing the boundaries in power system design?**
+
+  
+
+- Thermofisher
+- Allegro microsystems near boston
+- Microsoft Apple mainly subcontract
+- Current money is in AI and least affected rn (even more than military)
+    - Especially by tariffs
+        - Frozen hiring
+        - Frozen capital expenditures
+    - Even AI is starting to slow a little (but partially bcs big projects are finishing)
+- Very heavily involved in quantum computing
+    - But very far away
+    - They send it to someone who sends it to someone etc.
+- Nuclear power plant control systems and redundant power
+    - Most people have exited this place but them
+- Resilient startups in NY/incubators
+    - People with VC money and orders
+    - Pulling carbon from the atmosphere to make fuel
+    - Around navy yard in BKLN
+        - Big expo happening there?
+    - Transit system
+- 128 (?) boston
+- New hampshire
+- Silicon valley is hard to live in
+- Not many english speakers who are technicians
+- Makerspace clubs get some hands on experience
+    - CNC programming
+    - Programming any manufacturing machine
+        - 3D printing
+        - Assembly line things
+    - HAM radio

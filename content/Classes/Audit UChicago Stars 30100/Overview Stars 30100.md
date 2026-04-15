@@ -1,0 +1,3 @@
+## Textbooks used
+[[pollsStellarStructureEvolution]]
+[[ruttenRadiativeTransferStellar]]

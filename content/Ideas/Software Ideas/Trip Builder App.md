@@ -1,0 +1,10 @@
+- Built in comparison between flights, hotels/hostels/airbnb, and dates
+	- Web scraping for data
+	- Comparison between different price combinations across flights/hotels etc
+- General other travel builder
+	- Calendar
+	- Event planning
+- Sharing trip between people
+- Conversion of trip into a memory after?
+	- Add photos 
+	- Create a summary of important info/things done
