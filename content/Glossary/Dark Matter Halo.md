@@ -1,10 +1,10 @@
 ---
-aliases: [DM halo, DM Halo, Halo, halo, Dark matter halo, dark matter halo]
+aliases: [DM halo, DM Halo, Halo, halo, Dark matter halo, dark matter halo, dark matter halos, Dark matter halos]
 publish: True
 ---
 ## What is a dark matter halo?
 > [!lay]+ Plain English
-> A dark matter halo is a potentially confusing name and doesn't actually resemble a ring like an angel's halo. Instead a halo is more easily thought of as a roughly spherical cloud of [[Dark Matter|dark matter]] particles that are physically held together by gravity. Astrophysicists are especially interested in the shape of these halos as they directly pull on the matter we can see like galaxies and stars which then influences how they move and interact.
+> A dark matter halo is a potentially confusing name and doesn't actually resemble a ring like an angel's halo. Instead a halo is more easily thought of as a roughly spherical cloud of [[Dark Matter|dark matter]] particles that are physically held together by gravity. Astrophysicists are especially interested in the shape of these halos as they directly pull on the matter we can see like [[Galaxy|galaxies]] and stars which then influences how they move and interact.
 > <figure>
 > <img src="/Files/Images/halo_slice.png" />
 > <figcaption>Slice of a dark matter halo from an <a href="/N-body-Simulation">N-body Simulation</a>. The left panel depicts a 2D projection centered on the halo. The middle and right panels then display the infalling and orbiting populations as described by SPARTA. The black circle indicates the traditional R200m halo radius.</figcaption>
