@@ -61,14 +61,14 @@ Zaratan
 
 ## XGBoost Results Layout (out of date)
 
-- <SPARTA_file_train_on>_<snapshots>_<search_radius>
-    - <model_name>_<frac_training_data>_<GPU/CPU>
+- <SPARTA_file_train_on>\_<snapshots\>\_<search_radius>
+	- <model_name>\_<frac_training_data>\_<GPU/CPU>
         - plots
             - Generic plots to the model
-        - <dataset_type>_<SPARTA_file_test_on>
+        - <dataset_type>\_<SPARTA_file_test_on>
             - plots
                 - Plots specific to the model testing on this dataset
-        - <model_name>_<SPARTA_file_train_on>_<frac_training_data>_<GPU/CPU>
+        - <model_name>\_<SPARTA_file_train_on>\_<frac_training_data>\_<GPU/CPU>
         - model_info.pickle
 
 **Information Format of model_info.pickle file (out of date)**

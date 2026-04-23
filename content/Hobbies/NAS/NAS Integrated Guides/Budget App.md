@@ -11,7 +11,7 @@ Add network drive, in finder do "command k" and then ` smb://100.91.221.27/budge
 
 # Development
 - [x] #TODO Add a table breakdown of what I spent rather than just the pie chart  [due:: 2026-04-12]  [completion:: 2026-04-11]
-- [ ] #TODO Add timeline calculated from database for checking accounts [due:: 2026-04-19] #Hobby #Budget-App
+- [ ] #TODO Add timeline calculated from database for checking accounts [due:: 2026-04-26] #Hobby #Budget-App
 - [x] #TODO Add option to view custom time range #Hobby #Budget-App  [due:: 2026-04-12]  [completion:: 2026-04-11]
 - [x] #TODO Adjust the depositing and creation of CDS  [due:: 2026-02-22]  [completion:: 2026-02-13]
 - [x] #TODO Add the ability to create accounts (generalize an account to a class)  [due:: 2026-02-22]  [completion:: 2026-02-13]

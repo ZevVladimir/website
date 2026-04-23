@@ -11,3 +11,4 @@
 	- Drawers
 	- Converts to normal
 - New Mexican potter 6
+- Black out curtains

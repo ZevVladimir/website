@@ -687,14 +687,14 @@ rsync -av --include='202504*/' --include='*DEEEE*hdf' --exclude='*' /data10/Maro
 ### 1. Package FITS files
 - Done on mxred
 - ` cd /data10/MaroonX_spectra/`
-- ` dfits /data9/MaroonX_spectra/2022*/*SOOOE*.fits | fitsort 'HIERARCH MAROONX TELESCOPE PROGRAMID' | fgrep -i '22B-Q-218' | awk '{print $1}' > GN-2022B-Q-218_inlist_fits.txt `
+- ` dfits /data10/MaroonX_spectra/2026*/*SOOOE*.fits | fitsort 'HIERARCH MAROONX TELESCOPE PROGRAMID' | fgrep -i '26A-Q-218' | awk '{print $1}' > GN-2026A-Q-218_inlist_fits.txt `
 	- Before would
 	- ` dfits 2025*/*SOOOE*.fits | fitsort 'HIERARCH MAROONX TELESCOPE PROGRAMID' | fgrep -i '25B-FT-215' > GN-2025B-FT-215_inlist_fits.txt `   
 		- (or swap out ‘**PROGRAMID**’ for ‘**TARGETNAME**’)  
 		- Creates a list of all the fits file paths
 	- ` trim_dfits.sh GN-2025B-FT-215_inlist_fits.txt `
 		- Removes any extra information at the end besides the actual file paths
-- ` tar -czvf GN-2025B-FT-215_FITS.tar.gz -T GN-2025B-FT-215_inlist_fits.txt ; curl -H "Priority: 4" -d "tarred and zipped FITS files" https://ntfy.sh/MAROON-X `
+- ` tar -czvf GN-2026A-Q-215_FITS.tar.gz -T GN-2026A-Q-215_inlist_fits.txt ; curl -H "Priority: 4" -d "tarred and zipped FITS files" https://ntfy.sh/MAROON-X `
 	- Old way first tarred then zipped
 		- ` tar -cvf GN-2025B-FT-215_FITS.tar -T GN-2025B-FT-215_inlist_fits.txt ; curl -H "Priority: 4" -d "tarred FITS files" https://ntfy.sh/MAROON-X `
 			- Tar the all the files together -T tells tar to use the file paths to get those files
@@ -703,9 +703,11 @@ rsync -av --include='202504*/' --include='*DEEEE*hdf' --exclude='*' /data10/Maro
 ### 2. Package QC files
 - Done on mxred
 - ` cd /data10/MaroonX_spectra_reduced/ `
-- ` cp /data10/MaroonX_spectra/GN-2025B-FT-215_inlist_fits.txt . `
+- ` cp /data10/MaroonX_spectra/GN-2026A-Q-215_inlist_fits.txt . `
 	- Copy the .txt with all the file paths from Step 18 to this directory
-- ` convert_fits_to_logs.sh GN-2025B-FT-215_inlist_fits.txt ` 
+- `sed -i 's/MaroonX_spectra/MaroonX_spectra_reduced/g' /data10/MaroonX_spectra/TOI-1693_inlist_fits.txt`
+	- Convert the paths to where the QC files are stored
+- ` convert_fits_to_logs.sh GN-2026A-Q-215_inlist_fits.txt ` 
 	- Gets all the file paths for logs and plots for each of the observations
 	-  If some log or pdf files are not found that likely means the flux extraction was not run for that
 	- Ex: shows that the science flux extraction had not been run for blue 1800s science
@@ -713,23 +715,23 @@ rsync -av --include='202504*/' --include='*DEEEE*hdf' --exclude='*' /data10/Maro
 ls: cannot access '20250702/20250702T131007Z_SOOOE_b_1800*.log': No such file or directory
 ls: cannot access '20250702/20250702T131007Z_SOOOE_b_1800*.pdf': No such file or directory
 ```
-- ` tar -czvf GN-2025B-FT-215_QC.tar.gz -T GN-2025B-FT-215_inlist_fits.txt.logs ; curl -H "Priority: 4" -d "tarred and zipped QC files" https://ntfy.sh/MAROON-X `
+- ` tar -czvf GN-2026A-Q-215_QC.tar.gz -T GN-2026A-Q-215_inlist_fits.txt.logs ; curl -H "Priority: 4" -d "tarred and zipped QC files" https://ntfy.sh/MAROON-X `
 	- Old method first tars then zips
 		- ` tar -cvf GN-2025B-FT-215_QC.tar -T GN-2025B-FT-215_inlist_fits.txt.logs ; curl -H "Priority: 4" -d "tarred QC files" https://ntfy.sh/MAROON-X ` 
 		- ` gzip -v GN-2025B-FT-215_QC.tar ; curl -H "Priority: 4" -d "zipped QC files" https://ntfy.sh/MAROON-X`
 ### 3. Package H5 files
 - Done on mxred
 - ` cd /data10/MaroonX_spectra_reduced/ ` 
-- ` hdf_header.py -d '/data10/MaroonX_spectra_reduced/2025*' -f '2025*SOOOE_b_????.hdf' -ff 'PROGRAMID=GN-2025B-FT-215' > GN-2025B-FT-215_inlist_hd5.txt ; curl -H "Priority: 4" -d "created h5 file list" https://ntfy.sh/MAROON-X `
+- ` hdf_header.py -d '/data10/MaroonX_spectra_reduced/2026*' -f '2026*SOOOE_b_????.hdf' -ff 'PROGRAMID=GN-2026A-Q-215' > GN-2026A-Q-215_inlist_hd5.txt ; curl -H "Priority: 4" -d "created h5 file list" https://ntfy.sh/MAROON-X `
 	- (or swap out ‘**PROGRAMID**’ for ‘**TARGETNAME**’)  
-- ` zev_convert_serval_to_hd5.sh GN-2025B-FT-215_inlist_hd5.txt `
+- ` zev_convert_serval_to_hd5.sh GN-2026A-Q-215_inlist_hd5.txt `
 	- My version keeps the full paths so that if combining files across different data directories they are accurately found
-	- ` convert_serval_to_hd5.sh GN-2025B-FT-215_inlist_hd5.txt `
+	- ` convert_serval_to_hd5.sh GN-2026A-Q-215_inlist_hd5.txt `
 - If you are doing over multiple years and/or there is the potential for duplication in the files in the list run the following to check
 	- ` sort Barnard_2021A_to_2024B_inlist_hd5.txt | uniq -d `
 - If the list is long/good practice you can check if any of the files don't exist. They likely just have been shifted by 1 second so just search +- 1 second around the expected time and replace the file name in the list
 	- ` xargs -a Barnard_2021A_to_2024B_inlist_hd5.txt -I{} sh -c '[ ! -e "{}" ] && echo "MISSING: {}"' `
-- ` tar -czvf GN-2025B-FT-215_HD5.tar.gz -T GN-2025B-FT-215_inlist_hd5.txt  ; curl -H "Priority: 4" -d "tarred and zipped h5 files" https://ntfy.sh/MAROON-X `
+- ` tar -czvf GN-2026A-Q-215_HD5.tar.gz -T GN-2026A-Q-215_inlist_hd5.txt  ; curl -H "Priority: 4" -d "tarred and zipped h5 files" https://ntfy.sh/MAROON-X `
 	-  (If the tarring fails, check that the hd5 timestamps listed match the actual hd5 files.)
 		- This is generally if there is a 1 second difference between the red and blue arms and so the \_x\_ file can end up in a directory one second off than the one in the list of file paths. To fix this just correct the path to the right one
 	- Old method first tar then zip
@@ -737,7 +739,7 @@ ls: cannot access '20250702/20250702T131007Z_SOOOE_b_1800*.pdf': No such file or
 		- ` gzip -v GN-2025B-FT-215_HD5.tar  ; curl -H "Priority: 4" -d "zipped H5 files" https://ntfy.sh/MAROON-X `
 ### 4. Package SERVAL files (if RVs requested)
 - ` cd  /home/maroonx/serval3/ `
-- ` tar -czvf GN-2025B-Q-221_SERVAL.tar.gz Gl486_2025B  ; curl -H "Priority: 4" -d "tarred and zipped serval files" https://ntfy.sh/MAROON-X`
+- ` tar -czvf GN-2026A-Q-221_SERVAL.tar.gz Gl486_2025B  ; curl -H "Priority: 4" -d "tarred and zipped serval files" https://ntfy.sh/MAROON-X`
 	- Old method first tar then zip
 		- ` tar -cvf GN-2025B-Q-221_SERVAL.tar Gl486_2025B  ; curl -H "Priority: 4" -d "tarred serval files" https://ntfy.sh/MAROON-X` (skip ‘-T’) 
 		- ` gzip -v GN-2025B-Q-221_SERVAL.tar  ; curl -H "Priority: 4" -d "zipped SERVAL files" https://ntfy.sh/MAROON-X`

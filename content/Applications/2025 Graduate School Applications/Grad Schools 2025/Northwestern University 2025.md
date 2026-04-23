@@ -4,7 +4,7 @@ Type of Program: Astronomy PhD
 Status: Submitted
 Application Fee: 95
 Portal Link: https://www.applyweb.com/cgi-bin/app?s=NUGRAD&allow_entry=1
-Result:
+Result: Rejected
 Location: Evanston, IL
 Sarika Applying: No (UChicago close)
 Gross Salary: 0

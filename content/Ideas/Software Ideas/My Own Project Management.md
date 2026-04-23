@@ -23,6 +23,7 @@ Created: 2024-11-12T10:31
 	- Be able to click on a symbol or word and transfer to the corresponding file's definition/notes on it
 	- Create templates for topics that you can select on a page by page basis such that that note will auto link those files as detected (or with a tab to confirm)
 		- Template would allow for unique definitions depending on what you are writing about
+	- Or link to anything like if a persons name set so that it links to their website
 - Scaling priorities
 	- For longer term not super important tasks where you don't want to just keep pushing them back or not seeing them because their priority is too low
 	- Can set a maximum priority that slowly gets scaled to the closer the deadline is

@@ -7,7 +7,7 @@ Portal Link: https://apply.grad.arizona.edu/applications
 Application Fee: 90
 Sarika Applying: No
 Result: Accepted
-Gross Salary: 0
+Gross Salary: 41700
 Net Salary: 0
 ---
 # Visit

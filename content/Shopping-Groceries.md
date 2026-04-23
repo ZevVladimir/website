@@ -4,31 +4,24 @@
 - [ ] Bag clips   
 
 ## Vegetables/Fruits
-- [ ] Kiwi
-- [x] Bananas
-- [x] Mushroom
-- [x] Bell pepper
-- [x] Ginger
-- [x] Jalapeños 
-- [ ] Strawberry
-- [ ] Mint
-- [ ] Lime
+- [x] Kiwi
+- [x] Blueberry
+- [x] Banana
+- [x] Onion 
+- [ ] Cauliflower
 ## Others
 - [x] Eggs
-- [ ] Star anise
+- [x] Butter
 - [x] Bread
 - [x] Sundried tomato
 - [x] Fake sausage 
+- [x] Bacon
 - [x] Olives
-- [x] 1 lemons
-- [x] Olive oil
-- [x] Spinach 
-- [x] Vegetable stock
-- [x] 2 tofu
-- [ ] Sake?
-- [x] Chickpeas
-- [ ] Cleaning spray
-- [ ] Frozen broccoli
-- [ ] Ice cream 
+- [x] Pasta
+- [ ] Vegetable stock
+- [x] 3 tofu
+- [x] Ice cream
+- [ ] Hoisin sauce 
+- [ ] Vegetable oil
 
 

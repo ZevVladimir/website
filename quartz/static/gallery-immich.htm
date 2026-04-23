@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  html, body { margin: 0; padding: 0; font-family: sans-serif; background: rgb(22, 22, 24); }
+  #slideshow { position: relative; width: 100%; text-align: center; }
+  #current-img { width: 100%; max-height: 500px; object-fit: contain; border-radius: 8px; cursor: pointer; }
+  #caption { margin-top: 8px; font-size: 14px; color: #aaa; min-height: 20px; }
+  .controls { display: flex; justify-content: center; align-items: center; gap: 20px; margin-top: 10px; }
+  button { background: #333; color: white; border: none; padding: 8px 20px; border-radius: 6px; cursor: pointer; font-size: 18px; }
+  button:hover { background: #555; }
+  #counter { color: #666; font-size: 14px; }
+  #loading { color: #666; }
+</style>
+
+<script>
+  // Default to dark
+  var bg = 'rgb(22, 22, 24)';
+  document.documentElement.style.background = bg;
+
+  // Listen for theme messages from parent
+  window.addEventListener('message', function(e) {
+  <!-- console.log('received message:', e.data); -->
+  var bg = e.data.theme === 'light' ? 'rgb(250, 248, 248)' : 'rgb(22, 22, 24)';
+  document.documentElement.style.background = bg;
+  document.body.style.background = bg;
+});
+</script>
+</head>
+<body>
+<div id="slideshow">
+  <p id="loading">Loading...</p>
+  <img id="current-img" style="display:none;" />
+  <div id="caption"></div>
+  <div class="controls" style="display:none;" id="controls">
+    <button onclick="prev()">←</button>
+    <span id="counter"></span>
+    <button onclick="next()">→</button>
+  </div>
+</div>
+<script>
+var SHARE_KEY = "5aURyic6VSasAfPUCSyPQzsZY3Vxwyjqc7c93f0BetNitXgg3ApFJMmnYZGaUCGc-7E";
+var ALBUM_ID = "bde06600-edd0-4424-bcc7-1da796bb5bee";
+var BASE_URL = "https://truenas-scale-1.tail6da954.ts.net";
+
+// Apply theme to body once loaded
+var params2 = new URLSearchParams(window.location.search);
+var theme2 = params2.get('theme');
+var bg2 = theme2 === 'light' ? 'rgb(250, 248, 248)' : 'rgb(22, 22, 24)';
+document.body.style.background = bg2;
+
+var assets = [];
+var current = 0;
+
+function showImage(index) {
+  var asset = assets[index];
+  var img = document.getElementById('current-img');
+  img.src = BASE_URL + '/api/assets/' + asset.id + '/thumbnail?key=' + SHARE_KEY + '&size=preview';
+  document.getElementById('counter').textContent = (index + 1) + ' / ' + assets.length;
+  var exif = asset.exifInfo;
+  var caption = (exif && exif.description) ? exif.description : '';
+  if (!caption && exif && exif.city) {
+    caption = exif.city + (exif.state ? ', ' + exif.state : '') + (exif.country ? ' · ' + exif.country : '');
+  }
+  document.getElementById('caption').textContent = caption;
+}
+
+function shuffle(arr) {
+  for (var i = arr.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
+  }
+  return arr;
+}
+
+function next() { current = (current + 1) % assets.length; showImage(current); }
+function prev() { current = (current - 1 + assets.length) % assets.length; showImage(current); }
+
+fetch(BASE_URL + '/api/albums/' + ALBUM_ID + '?key=' + SHARE_KEY, {
+  headers: { "x-immich-share-key": SHARE_KEY }
+})
+.then(function(r) { return r.json(); })
+.then(function(data) {
+  assets = shuffle(data.assets.filter(function(a) { return a.type === 'IMAGE'; }));
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('current-img').style.display = 'block';
+  document.getElementById('controls').style.display = 'flex';
+  var img = document.getElementById('current-img');
+  img.style.cursor = 'default';
+  showImage(0);
+});
+</script>
+</body>
+</html>

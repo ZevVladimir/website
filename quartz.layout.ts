@@ -1,5 +1,6 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
+import LevelToggle from "./quartz/components/LevelToggle"
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
@@ -38,10 +39,35 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+  folderClickBehavior: "link",
+  folderDefaultState: "collapsed",
+}),
+LevelToggle,
   ],
   right: [
-    Component.Graph(),
+    Component.ProfileImage(undefined),
+    Component.Graph({
+    localGraph: {
+      depth: 3,           // How many hops from current page (default is 1)
+      showTags: false,     // Include tag nodes
+      linkDistance: 30,   // Distance between nodes
+      fontSize: 0.8,      // Label font size
+      opacityScale: 1,    // Opacity of distant nodes
+      repelForce: 0.5,    // How much nodes push apart
+      centerForce: 0.3,   // How strongly nodes pull to center
+      scale: 1.1,         // Initial zoom level
+    },
+    globalGraph: {
+      linkDistance: 10,
+      fontSize: 0.6,
+      opacityScale: 1,
+      repelForce: 0.6,
+      centerForce: 1.0,
+      scale: 1.1,
+      showTags: false,
+    },
+  }),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
@@ -62,7 +88,10 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+  folderClickBehavior: "link",
+  folderDefaultState: "open",
+}),
   ],
   right: [],
 }

@@ -31,7 +31,6 @@ tags: log
 - Reran try 1-2 for yes bse no binaries, no bse no binaries, and ran try3 for yes bse yes binaries
 - 
 ## 2026-03-11
-- [ ] #TODO Figure out what I'm actually looking for here. How does DM affect the cluster evolution vs not having the DM. How do stellar streams affect this/are affected by this? [due:: 2026-04-20] #UMaIII/U1
 ### PeTar Initial Summary
 - UMaIIIU1 Try1 (Yes bse, No binaries, yes MW Pot)
 	- Started

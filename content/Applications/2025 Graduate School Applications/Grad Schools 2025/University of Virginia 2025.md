@@ -4,7 +4,7 @@ Type of Program: Astronomy PhD
 Status: Submitted
 Application Fee: 85
 Portal Link: https://applycentral.virginia.edu/apply/
-Result: Waitlisted
+Result: Rejected
 Location: Charlottesville, VA
 Sarika Applying: Yes
 Gross Salary: 0

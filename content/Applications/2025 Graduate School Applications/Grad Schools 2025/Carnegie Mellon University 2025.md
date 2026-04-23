@@ -6,7 +6,7 @@ Location: Pittsburgh, PA
 Portal Link: https://apply-dc-mcs.mcs.cmu.edu/apply/
 Application Fee: 25
 Sarika Applying: No (University of Pittsburgh close)
-Result:
+Result: Rejected
 Gross Salary: 0
 Net Salary: 0
 ---

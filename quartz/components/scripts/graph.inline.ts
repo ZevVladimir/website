@@ -122,28 +122,30 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     }
   }
 
-  const neighbourhood = new Set<SimpleSlug>()
+  const neighbourhood = new Map<SimpleSlug, number>() // slug → depth from current
   const wl: (SimpleSlug | "__SENTINEL")[] = [slug, "__SENTINEL"]
+  let currentDepth = 0
   if (depth >= 0) {
-    while (depth >= 0 && wl.length > 0) {
-      // compute neighbours
+    while (currentDepth <= depth && wl.length > 0) {
       const cur = wl.shift()!
       if (cur === "__SENTINEL") {
-        depth--
+        currentDepth++
         wl.push("__SENTINEL")
       } else {
-        neighbourhood.add(cur)
-        const outgoing = links.filter((l) => l.source === cur)
-        const incoming = links.filter((l) => l.target === cur)
-        wl.push(...outgoing.map((l) => l.target), ...incoming.map((l) => l.source))
+        if (!neighbourhood.has(cur)) {
+          neighbourhood.set(cur, currentDepth)
+          const outgoing = links.filter((l) => l.source === cur)
+          const incoming = links.filter((l) => l.target === cur)
+          wl.push(...outgoing.map((l) => l.target), ...incoming.map((l) => l.source))
+        }
       }
     }
   } else {
-    validLinks.forEach((id) => neighbourhood.add(id))
-    if (showTags) tags.forEach((tag) => neighbourhood.add(tag))
+    validLinks.forEach((id) => neighbourhood.set(id, -1))
+    if (showTags) tags.forEach((tag) => neighbourhood.set(tag, -1))
   }
 
-  const nodes = [...neighbourhood].map((url) => {
+  const nodes = [...neighbourhood.keys()].map((url) => {
     const text = url.startsWith("tags/") ? "#" + url.substring(5) : (data.get(url)?.title ?? url)
     return {
       id: url,
@@ -184,6 +186,11 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     "--dark",
     "--darkgray",
     "--bodyFont",
+    "--graph-current",
+    "--graph-tag",
+    "--graph-depth-1",
+    "--graph-depth-2",
+    "--graph-depth-3",
   ] as const
   const computedStyleMap = cssVars.reduce(
     (acc, key) => {
@@ -196,14 +203,25 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
   // calculate color
   const color = (d: NodeData) => {
     const isCurrent = d.id === slug
+    const nodeDepth = neighbourhood.get(d.id) ?? 0
+
     if (isCurrent) {
-      return computedStyleMap["--secondary"]
-    } else if (visited.has(d.id) || d.id.startsWith("tags/")) {
-      return computedStyleMap["--tertiary"]
+      return computedStyleMap["--graph-current"] || computedStyleMap["--secondary"]
+    } else if (d.id.startsWith("tags/")) {
+      return computedStyleMap["--graph-tag"] || computedStyleMap["--tertiary"]
+    // } else if (visited.has(d.id)) {
+    //   return computedStyleMap["--graph-visited"] || computedStyleMap["--tertiary"]
+    } else if (nodeDepth === 1) {
+      return computedStyleMap["--graph-depth-1"] || computedStyleMap["--lightgray"]
+    } else if (nodeDepth === 2) {
+      return computedStyleMap["--graph-depth-2"] || computedStyleMap["--gray"]
+    } else if (nodeDepth === 3) {
+      return computedStyleMap["--graph-depth-3"] || computedStyleMap["--darkgray"]
     } else {
       return computedStyleMap["--gray"]
     }
   }
+
 
   function nodeRadius(d: NodeData) {
     const numLinks = graphData.links.filter(
@@ -369,7 +387,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
   const labelsContainer = new Container<Text>({ zIndex: 3, isRenderGroup: true })
   const nodesContainer = new Container<Graphics>({ zIndex: 2, isRenderGroup: true })
   const linkContainer = new Container<Graphics>({ zIndex: 1, isRenderGroup: true })
-  stage.addChild(nodesContainer, labelsContainer, linkContainer)
+  stage.addChild(linkContainer, nodesContainer, labelsContainer)
 
   for (const n of graphData.nodes) {
     const nodeId = n.id
@@ -391,47 +409,57 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
 
     let oldLabelOpacity = 0
     const isTagNode = nodeId.startsWith("tags/")
-    const gfx = new Graphics({
-      interactive: true,
-      label: nodeId,
-      eventMode: "static",
-      hitArea: new Circle(0, 0, nodeRadius(n)),
-      cursor: "pointer",
-    })
+    const isCurrent = nodeId === slug
+  const gfx = new Graphics({
+    interactive: true,
+    label: nodeId,
+    eventMode: "static",
+    hitArea: new Circle(0, 0, nodeRadius(n) * 1.5),
+    cursor: "pointer",
+  })
+
+  if (isCurrent) {
+    const r = nodeRadius(n) * 1.5
+    gfx.poly([0, -r, r, 0, 0, r, -r, 0]).fill({ color: color(n) })
+  } else {
+    gfx
       .circle(0, 0, nodeRadius(n))
       .fill({ color: isTagNode ? computedStyleMap["--light"] : color(n) })
-      .on("pointerover", (e) => {
-        updateHoverInfo(e.target.label)
-        oldLabelOpacity = label.alpha
-        if (!dragging) {
-          renderPixiFromD3()
-        }
-      })
-      .on("pointerleave", () => {
-        updateHoverInfo(null)
-        label.alpha = oldLabelOpacity
-        if (!dragging) {
-          renderPixiFromD3()
-        }
-      })
+  }
 
-    if (isTagNode) {
-      gfx.stroke({ width: 2, color: computedStyleMap["--tertiary"] })
-    }
+  gfx
+    .on("pointerover", (e) => {
+      updateHoverInfo(e.target.label)
+      oldLabelOpacity = label.alpha
+      if (!dragging) {
+        renderPixiFromD3()
+      }
+    })
+    .on("pointerleave", () => {
+      updateHoverInfo(null)
+      label.alpha = oldLabelOpacity
+      if (!dragging) {
+        renderPixiFromD3()
+      }
+    })
 
-    nodesContainer.addChild(gfx)
-    labelsContainer.addChild(label)
+  if (isTagNode) {
+    gfx.stroke({ width: 2, color: computedStyleMap["--tertiary"] })
+  }
 
-    const nodeRenderDatum: NodeRenderData = {
-      simulationData: n,
-      gfx,
-      label,
-      color: color(n),
-      alpha: 1,
-      active: false,
-    }
+  nodesContainer.addChild(gfx)
+  labelsContainer.addChild(label)
 
-    nodeRenderData.push(nodeRenderDatum)
+  const nodeRenderDatum: NodeRenderData = {
+    simulationData: n,
+    gfx,
+    label,
+    color: color(n),
+    alpha: 1,
+    active: false,
+  }
+
+  nodeRenderData.push(nodeRenderDatum)
   }
 
   for (const l of graphData.links) {
@@ -511,7 +539,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
 
           // zoom adjusts opacity of labels too
           const scale = transform.k * opacityScale
-          let scaleOpacity = Math.max((scale - 1) / 3.75, 0)
+          let scaleOpacity = Math.max((scale - 0.7) / 1.5, 0)
           const activeNodes = nodeRenderData.filter((n) => n.active).flatMap((n) => n.label)
 
           for (const label of labelsContainer.children) {

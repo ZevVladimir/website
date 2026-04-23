@@ -1,6 +1,213 @@
 ---
 tags: log
 ---
+## 2026-04-22
+### SERVAL
+- [ ] #TODO Run SERVAL for Martin's new data  [due:: 2026-04-27] #MAROON-X 
+### Data Reduction
+- [ ] #TODO Reduce Nov 2024 DLLLE data  [due:: 2026-04-24] #MAROON-X 
+#### Auto Data Reduction
+- There is an issue with the star naming in barycentric corrections
+- The star's name gets changed to what is first in SIMBAD and if the original name isn't searched for in the barycenter correction command then no correction is performed
+- Additionally this doesn't throw an error so will add a check to see if there is "BERV_FLUXWEIGHTED_FRD" in the log
+- Also had issues with SIMBAD failing when running the barycenter correction code. Added in protections to restart the script after a few seconds and also have a slight delay between each run
+	- The issue was actually with a specific star: BD+02 2056 not actually too many requests
+	- Solution was to query the TAP database after failing
+	- Then to return the RA/DEC from TAP and then use these as the "use coords" option since barrycorpy itself queries SIMBAD and would fail
+#### Data to send out
+- GN-2026A-FT-203
+	- [ ] SERVAL 
+		- r:
+		- b:
+	- [ ] Package fits
+	- [ ] Package QC
+	- [ ] Package h5
+	- [ ] Package SERVAL
+- GN-2026A-LP-116
+	- [x] SERVAL 
+		- Not enough for running 2 observations for TOI-6086
+		- TOI-5507 (3 obs)
+			- r
+			- b
+	- [ ] Package fits
+	- [ ] Package QC
+	- [ ] Package h5
+- GN-2026A-LP-212
+	- [ ] SERVAL 
+		- 1 obs for CD-23 14742 
+		- ROSS 128 (3 obs)
+			- r
+			- b
+	- [ ] Package fits
+	- [ ] Package QC
+	- [ ] Package h5
+	- [ ] Package SERVAL
+- GN-2026A-Q-104
+	- [ ] SERVAL 
+		- r:
+		- b:
+	- [ ] Package fits
+	- [ ] Package QC
+	- [ ] Package h5
+	- [ ] Package SERVAL
+- GN-2026A-Q-118
+	- [ ] SERVAL 
+		- r:
+		- b:
+	- [ ] Package fits
+	- [ ] Package QC
+	- [ ] Package h5
+	- [ ] Package SERVAL
+- GN-2026A-Q-122 (?)
+	- [ ] SERVAL 
+		- r:
+		- b:
+	- [ ] Package fits
+	- [ ] Package QC
+	- [ ] Package h5
+	- [ ] Package SERVAL
+- GN-2026A-Q-133 (already sent out?)
+	- [ ] SERVAL 
+		- r:
+		- b:
+	- [ ] Package fits
+	- [ ] Package QC
+	- [ ] Package h5
+	- [ ] Package SERVAL
+- GN-2026A-Q-139 (?)
+	- [ ] SERVAL 
+		- r:
+		- b:
+	- [ ] Package fits
+	- [ ] Package QC
+	- [ ] Package h5
+	- [ ] Package SERVAL
+- GN-2026A-Q-302
+	- [ ] SERVAL 
+		- r:
+		- b:
+	- [ ] Package fits
+	- [ ] Package QC
+	- [ ] Package h5
+	- [ ] Package SERVAL
+- GN-2026A-Q-323 (?)
+	- [ ] SERVAL 
+		- r:
+		- b:
+	- [ ] Package fits
+	- [ ] Package QC
+	- [ ] Package h5
+	- [ ] Package SERVAL
+- GN-2026A-Q-324 (?)
+	- [ ] SERVAL 
+		- r:
+		- b:
+	- [ ] Package fits
+	- [ ] Package QC
+	- [ ] Package h5
+	- [ ] Package SERVAL
+- GN-2026A-Q-325 (?)
+	- [ ] SERVAL 
+		- r:
+		- b:
+	- [ ] Package fits
+	- [ ] Package QC
+	- [ ] Package h5
+	- [ ] Package SERVAL
+- GN-2026A-Q-402
+	- [ ] SERVAL 
+		- r:
+		- b:
+	- [ ] Package fits
+	- [ ] Package QC
+	- [ ] Package h5
+	- [ ] Package SERVAL
+- GN-2026A-Q-407 (?)
+	- [ ] SERVAL 
+		- r:
+		- b:
+	- [ ] Package fits
+	- [ ] Package QC
+	- [ ] Package h5
+	- [ ] Package SERVAL
+- GN-2026A-Q-408
+	- [ ] SERVAL 
+		- r:
+		- b:
+	- [ ] Package fits
+	- [ ] Package QC
+	- [ ] Package h5
+	- [ ] Package SERVAL
+- GN-2026A-Q-414 (?)
+	- [ ] SERVAL 
+		- r:
+		- b:
+	- [ ] Package fits
+	- [ ] Package QC
+	- [ ] Package h5
+	- [ ] Package SERVAL
+## 2026-04-22
+### Data Reduction
+- [ ] #TODO Add a restart parameter (with levels?) to the auto reduction that clears stuff like generated files (obs_dict, logs) as well as reduced files #MAROON-X  [due:: 2026-04-29]
+#### 202604 Reduction
+- Started
+- [ ] #TODO Send out current GN-2026A data  [due:: 2026-04-27] #MAROON-X 
+### SERVAL
+#### GN-2024B-Q-106
+- \*\_tau_ceti 
+	- Blue rerun excluding 18 19 27
+	- Red rerun excluding 9 14 19 20
+- HD4628
+	- Blue looks good
+	- Red rerun excluding 9 10 14 18 19
+- HD32147 
+	- Blue looks good
+	- Red rerun excluding 9 14 19
+## 2026-04-21
+### SERVAL
+- [x] #TODO Run serval on TOI-1693 from GN-2020B-Q-234 and GN-2021B-Q-230. Separately #MAROON-X  [due:: 2026-04-21]
+- Running three ways
+	- Just 2020B
+	- Just 2021B
+	- Combined
+### Data Reduction
+#### GN-2024B-Q-106 re-reduction
+- 20240919 was missing etalon data reduction for some reason so re-reduced those
+## 2026-04-20
+### Data Reduction
+- [x] #TODO Start reduction for april #MAROON-X   [due:: 2026-04-22]
+- [ ] #TODO Investigate differences between serval python2 vs python3 to prep for friday  [due:: 2026-04-23]
+#### GN-2024B-Q-106 re-reduction
+- Using [this spreadsheet](https://docs.google.com/spreadsheets/d/1WkXW9bPLPeBfSe5s4rD_nuGurk_ZfrUAVrq8zLAOeEM/edit?gid=0#gid=0) to keep track
+- Looks like there are no integer shifts needed 
+- Easy to find for 201 seconds, 206 seconds, and 40 seconds for 60 seconds only wanted to use the one on 20240921
+- Run split
+	- 201 seconds all dates (HD32147)
+	- 206 seconds all dates (HD4628)
+	- 40 seconds 20240919 (* tau Cet)
+	- 40 seconds 20240920 (* tau Cet)
+	- 40 seconds 20240921 (* tau Cet)
+	- 40 seconds 20240922 (* tau Cet)
+	- 40 seconds 20240923 (* tau Cet)
+	- 60 seconds 20240921 (* tau Cet)
+
+## 2026-04-17
+### Data Reduction
+- Packaged data for TOI-782 from 2022A to send out on request 
+- [x] #TODO Re-reduce GN-2024B-Q-106 #MAROON-X [priority::  Normal] [due:: 2026-04-22]
+## 2026-04-16
+### Data Reduction
+#### 202603 reduction
+- Finished with seemingly no major errors/warnings
+### SERVAL
+- GN-2026A-Q-133
+	- TOI-6894
+		- Blue not enough SNR
+		- Red removed 0 1 2 3 4 5 9 12 19
+	- TOI-519
+		- Re-ran with the re-reduction and seems to actually run on the red arm
+		- Blue not enough SNR
+		- Red removed 0 1 2 5 13 18 19
 ## 2026-04-15
 ### Data Reduction
 #### 202603 reduction
@@ -69,7 +276,7 @@ File: /data10/MaroonX_spectra_reduced/20240225/20240225T154818Z_SOOOE_r_0300.hdf
 - Missing all the backgroundfit.pdf plots for 20260306 SOOOE b 0900 frames. Which is from the science flux extraction which is a bit concerning
 	- Will rerun the data reduction pipeline for that data  
 	- After re-reduction those files were there. Just had to remove the two quarantined files as well
-	- [ ] #TODO Re-run serval on TOI-519  [due:: 2026-04-16]
+	- [x] #TODO Re-run serval on TOI-519  [due:: 2026-04-16]
 - Decided I'm just going to re-run the reduction all together now that all the data is on the server and I can remove the two bad files
 #### SERVAL
 - GN-2026A-Q-133
@@ -308,7 +515,7 @@ with open('/home/maroonx/serval/martin_test.lis', 'w') as out:
 	- Reran the LFC dark reduction as well since there were some dates with the wrong LFC (with the higher exposure) and that was what was directly causing the script to choose the wrong files
 ## 2026-04-05
 - Fixed mistype in code that meant that not all etalon data was being flux extracted (only the last dates in the loop actually were run)
-- [ ] #TODO Implement more robust checks in data reduction #MAROON-X  [due:: 2026-04-17]
+- [ ] #TODO Implement more robust checks in data reduction #MAROON-X  [due:: 2026-05-04]
 	- Check that all the etalon files are flux extracted (like what is done with the science files)
 - [x] #TODO Improve logging for individual runs of a step in data reduction to be separate or append to one file. Right now they overwrite one another with the same name.  [due:: 2026-04-09]
 ## 2026-04-03
@@ -500,7 +707,7 @@ for f in sorted(glob.glob('/data*/MaroonX*/202[4-5]*/*SOOOE*.fits.gz')):
 ### Data Reduction
 - [x] #TODO Undo edit to reduce/batch_extraction.py at line 56 [due:: 2026-03-30] #MAROON-X
 	- Added for the Ritvik reduction to allow for the data directory to be a different folder within MaroonX_spectra
-- [ ] #TODO See if sim links can be created for log files across the data reduction so they're all in the same location after [due:: 2026-04-22] #MAROON-X
+- [ ] #TODO See if sim links can be created for log files across the data reduction so they're all in the same location after [due:: 2026-05-01] #MAROON-X
 - [x] #TODO Respond to email about GN-2026A-FT-107  [due:: 2026-03-12]  [completion:: 2026-03-16]
 - For Ritvik's files
 	- Go month by month for 
@@ -566,7 +773,6 @@ done
 - Also created a setup script and had some issues with wxpython but was able to resolve it by both removing wxpython and raccoon from the requirements.txt and installing wxpython separately based on what operating system is used
 ## 2026-03-04
 ### Data Reduction
-- [ ] #TODO Reduce first look data for GN-2026A-Q-324 [due:: 2026-04-16] #MAROON-X
 - Looks like auto data mover isn't working? Might be because not enough space on data10 or it just is a day behind, will wait one day until asking
 	- Was just a day behind
 - Packaging Lorenzo Pino npz files
@@ -836,7 +1042,7 @@ raccoonccf b_spectra.lis "MAROONX-blue" TOI-1408 --obj TOI-1408 --bjd header --s
 ### SERVAL
 - Try the Python2 version of SERVAL and see if that is faster
 - Try running the Python3 version straight and seeing if there is indeed a different than tuning the MAROON-X version on the server to using the compiled spline fitting
-- [ ] #TODO Look into multiprocessing for SERVAL and where it can be implemented [due:: 2026-04-24] #MAROON-X
+- [ ] #TODO Look into multiprocessing for SERVAL and where it can be implemented [due:: 2026-05-01] #MAROON-X
 - [x] #TODO Plan out SERVAL update  [due:: 2026-02-24]  [completion:: 2026-02-24]
 ## 2026-02-19
 %%- [ ] #TODO Automate the packaging of data, input list of targets/program IDs and iterate through. Also include at least warning or handling of older data [due:: 2026-04-10] #MAROON-X%%
