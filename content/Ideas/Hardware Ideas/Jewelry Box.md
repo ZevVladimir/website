@@ -1,5 +1,0 @@
-- Start with plans from Sarika's
-- Add watch holders
-- Add compartments that are modular?
-- Maybe use the wood from the old door?
-- Drawers hang when pulled out to dis pop ⁰play 

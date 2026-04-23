@@ -1,7 +1,0 @@
-- Intel i7-6700 @ 3.40GHz
-- 16GB RAM 2400 MHz
-- NVIDIA GeForce GTX 1070
-- 1TB HDD
-- 256GB SSD TOSHIBA RD400
-- MS-B902 Motherboard
-- [https://www.msi.com/Desktop/Aegis-X/Specification](https://www.msi.com/Desktop/Aegis-X/Specification)

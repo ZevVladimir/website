@@ -1,5 +1,0 @@
-I have worked with XGBoost for my research project with Dr. Benedikt Diemer, I have implemented custom loss functions, hyperparameter tuning throughout my experimentation with the model to achieve 97% accuracy on our testing dataset. I also spent a large amount of time working on understanding the model's classifications decisions, primarily using SHAP values.
-
-For my project with Dr. Shabnam Jabeen I primarily worked on quantum machine learning models such as variational quantum regressors, variational quantum classifiers, and quantum random forests. But I also worked with traditional random forest models and neural networks to compare the accuracy and efficiency between the quantum and classical methods.
-
-I also took Machine Learning for Physics, a 400 level class at the University of Maryland. We both discussed and coded from scratch machine learning models, from linear regression to deep neural networks. For my final project, I constructed a convolutional neural network.

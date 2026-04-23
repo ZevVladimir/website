@@ -1,5 +1,0 @@
-- Game where there are balls in balls!
-	- Could be matryoshka type vibe with a lot of them
-	- Different amount of points depending which ball and if it is within another one
-	- Can easily separate and reattach them. Maybe magnet type vibe/tractor beam type vibe
-	- Could be kinda quidditchy? 

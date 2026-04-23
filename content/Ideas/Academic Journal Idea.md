@@ -1,2 +1,0 @@
-- For the first week/month author names are randomized (but still would be linked back to the original author for citation)
-- Afterwards the names are returned to normal

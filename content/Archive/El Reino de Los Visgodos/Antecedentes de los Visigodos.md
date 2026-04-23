@@ -1,4 +1,0 @@
-- Los visigóticos eran originarios de Europe del Este, pero emigraron hasta la Galia y Hispania
-- Inicialmente los Godos se convirtieron a Arianism un tipo de cristianismo donde creen que Jesús está separado de Dios (a diferencia de cristianismo de Nicea)
-- Rey Reccared I convirtió a catolicismo
-    - Esto redujo la tension entre los visigóticos y los hispanorromanos, pero la aumentó para los judíos

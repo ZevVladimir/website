@@ -1,1 +1,0 @@
-Comment: Accepted in ApJL
