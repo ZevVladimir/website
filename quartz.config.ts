@@ -16,7 +16,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
+    baseUrl: "zeevvladimir.com",
     ignorePatterns: ["private", "templates", ".obsidian", "Files/Papers/**", "Templates/", "*.sync-conflict-*"],
     defaultDateType: "modified",
     theme: {
