@@ -57,7 +57,7 @@ I also am trying to make my website as accessible as possible to people from a b
 >[!Technical] For someone who actively works with astronomy/physics
 >$G_{\mu \nu}+\Lambda g_{\mu \nu}=\kappa T_{\mu \nu}$
 
-You can manually open them or use the toolbox that appears on the left side to select which level works best for you! If you feel particularly interested in a topic don't be afraid to look at the next level up or any of the provided resources :)
+You can manually open them or use the toolbox that appears on the top of each page, except this one where it is just below, to select which level works best for you! If you feel particularly interested in a topic don't be afraid to look at the next level up or any of the provided resources :).
 
 ## Contact
 **Email:** zevvladimir3002@gmail.com
