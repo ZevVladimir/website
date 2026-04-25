@@ -46,18 +46,15 @@ For more information check out:
 Dwarf galaxies, the smallest [[Galaxy|galaxies]], provide an excellent "laboratory" to study both galaxies and [[Dark Matter|dark matter]]. Based on the smallest galaxies that we can find we are able to place constraints on dark matter as different proposed models expect different ranges in size. With [Dr. Andrey Kravstov](https://astro.uchicago.edu/~andrey/) at the University of Chicago I am running [[N-body Simulation|N-body simulations]] of a potential dwarf galaxy, Ursa Major III / UNIONS 1. We are looking for an observable [[Stellar Stream|stellar stream]] from which we would be able to determine if it is indeed the smallest dwarf galaxy ever found.
 
 ## Navigating the Website
-I also am trying to make my website as accessible as possible to people from a broad range of backgrounds. You have probably noticed links like [[index|Example Link]] which take you to different pages within the website much like Wikipedia. I've tried to provide definitions, illustrations, videos, and links to additional resources where possible. The goal is to provide a broader understanding of some key astrophysical concepts which motivate the very specific work I do. Additionally, as you navigate, you will see some of these pages have the following callouts: 
+I also am trying to make my website as accessible as possible to people from a broad range of backgrounds. You have probably noticed links like [[index|Example Link]] which take you to different pages within the website much like Wikipedia. Additionally, if you are on a computer you can just hover over these links to get a quick look! 
 
->[!lay]+ For someone with little to no astronomy/physics background
->Physics is cool!
+I've tried to provide definitions, illustrations, videos, and links to additional resources where possible. The goal is to provide a broader understanding of some key astrophysical concepts which motivate the very specific work I do. Additionally, as you navigate, you will see some of these pages have the following call outs: 
 
->[!general]+ For someone with a basic knowledge of astronomy/physics
->$\mathrm{\vec{F}=m \vec{a}}$
+>[!lay]+ For everyone!
+> These blocks indicate the information is for people of any background. Expect more digestible explanations that leave out the more technical details/nuances. They also might include longer descriptions of plots or results to help everyone learn.
 
->[!Technical]+ For someone who actively works with astronomy/physics
->$G_{\mu \nu}+\Lambda g_{\mu \nu}=\kappa T_{\mu \nu}$
-
-You can manually open them or use the toolbox that appears on the top of each page, except this one where it is just below, to select which level works best for you! If you feel particularly interested in a topic don't be afraid to look at the next level up or check out any of the provided resources :).
+>[!general]+ For someone looking for some more technical details
+> These blocks indicate that the topics will contain more complex material, often more jargon or equations. They are intended for an audience with background in astrophysics but not so difficult to scare anyone off. So if you're interested in a particular topic definitely check these out too!
 
 ## Contact
 **Email:** zevvladimir3002@gmail.com

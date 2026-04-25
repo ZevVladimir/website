@@ -2,3 +2,5 @@
 aliases: [N-body, N-body simulation, N-body simulations, N-body Simulations]
 publish: True
 ---
+>[!lay]+ For Everyone!
+>N-body Simulations are one of the key ways to simulate our universe. To create one of these simulations you use *N* (any number) of bodies (a star, a dark matter particle, whatever you want!) and some basic physics to move those bodies through time and that's it! The difficulty arises when you realize how big *N* needs to be to simulate something. For example, if you wanted to simulate just the Milky Way you would need over 100 *billion* particles just for the stars and that's not counting all of the dust, dark matter, and neighboring galaxies that all affect the Milky Way. Although computational improvements have meant that simulations on the scale of a galaxy that resolve individual stars with additional physics are now doable, scaling this up to the 100 of billions to trillions of galaxies in the universe is impossible now. Naturally, astrophysicists want to study the whole universe have found ways to avoid having to simulate every particle individually and in super-fine detail. 

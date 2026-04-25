@@ -1,16 +1,12 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
-import LevelToggle from "./quartz/components/LevelToggle"
+// import LevelToggle from "./quartz/components/LevelToggle"
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
   afterBody: [
-    Component.ConditionalRender({
-      component: LevelToggle,
-      condition: (page) => page.fileData.slug === "index",
-    }),
   ],
   footer: Component.Footer({
     links: {
@@ -30,10 +26,6 @@ export const defaultContentPageLayout: PageLayout = {
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),
-    Component.ConditionalRender({
-      component: LevelToggle,
-      condition: (page) => page.fileData.slug !== "index",
-    }),
   ],
   left: [
     Component.PageTitle(),
@@ -55,6 +47,7 @@ export const defaultContentPageLayout: PageLayout = {
   ],
   right: [
     Component.DesktopOnly(Component.ProfileImage(undefined)),
+    Component.DesktopOnly(Component.TableOfContents()),
     Component.DesktopOnly(Component.Graph({ 
     localGraph: {
       depth: 3,           // How many hops from current page (default is 1)
@@ -76,7 +69,6 @@ export const defaultContentPageLayout: PageLayout = {
       showTags: false,
     },
      })),
-    Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
 }
@@ -91,10 +83,6 @@ export const defaultListPageLayout: PageLayout = {
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),
-    Component.ConditionalRender({
-      component: LevelToggle,
-      condition: (page) => page.fileData.slug !== "index",
-    }),
   ],
 
   left: [
