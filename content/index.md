@@ -48,16 +48,16 @@ Dwarf galaxies, the smallest [[Galaxy|galaxies]], provide an excellent "laborato
 ## Navigating the Website
 I also am trying to make my website as accessible as possible to people from a broad range of backgrounds. You have probably noticed links like [[index|Example Link]] which take you to different pages within the website much like Wikipedia. I've tried to provide definitions, illustrations, videos, and links to additional resources where possible. The goal is to provide a broader understanding of some key astrophysical concepts which motivate the very specific work I do. Additionally, as you navigate, you will see some of these pages have the following callouts: 
 
->[!lay] For someone with little to no astronomy/physics background
+>[!lay]+ For someone with little to no astronomy/physics background
 >Physics is cool!
 
->[!general] For someone with a basic knowledge of astronomy/physics
+>[!general]+ For someone with a basic knowledge of astronomy/physics
 >$\mathrm{\vec{F}=m \vec{a}}$
 
->[!Technical] For someone who actively works with astronomy/physics
+>[!Technical]+ For someone who actively works with astronomy/physics
 >$G_{\mu \nu}+\Lambda g_{\mu \nu}=\kappa T_{\mu \nu}$
 
-You can manually open them or use the toolbox that appears on the top of each page, except this one where it is just below, to select which level works best for you! If you feel particularly interested in a topic don't be afraid to look at the next level up or any of the provided resources :).
+You can manually open them or use the toolbox that appears on the top of each page, except this one where it is just below, to select which level works best for you! If you feel particularly interested in a topic don't be afraid to look at the next level up or check out any of the provided resources :).
 
 ## Contact
 **Email:** zevvladimir3002@gmail.com
