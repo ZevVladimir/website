@@ -32,7 +32,7 @@ My primary interests are in how computational techniques can be applied to bette
 I have some information about my personal interests and community work in [[About Me]]. For information about my research projects see any of the overview pages which are listed below. 
 ## Research Projects
 ### Exoplanet Search with the Radial Velocity Method 
-My current work is with [Dr. Jacob Bean](https://astro.uchicago.edu/~jbean/index.html) at the University of Chicago to reduce the data produced by MAROON-X, an instrument on the Gemini-North telescope. This reduction process takes the raw [[Charge-Coupled Device|CCD]] images and obtain extremely precise radial velocity measurements of stars. With these radial velocities we, and our collaborators, are able to find and characterize exoplanets. 
+My current work is with [Dr. Jacob Bean](https://astro.uchicago.edu/~jbean/index.html) at the University of Chicago to reduce the data produced by MAROON-X, an instrument on the Gemini-North telescope. This reduction process takes the raw [[Charge-Coupled Device|CCD]] images and through careful calibrations produces extremely precise radial velocity measurements of stars. With these radial velocities we, and our collaborators, are able to find and characterize exoplanets. 
 
 For a more in-depth explanation please check out [[MAROON-X Overview]]
 
@@ -43,7 +43,7 @@ For more information check out:
 - Distinguishing Orbiting and Infalling Dark Matter Particles with Machine Learning.  **Vladimir, Z.**, Osinga, C., Diemer, B., Salazar, E. M., & Rozo, E. — *The Astrophysical Journal*, 2025 [Paper](https://doi.org/10.3847/1538-4357/ae1a76) | [arXiv](https://arxiv.org/abs/2506.09146) | [Code](https://doi.org/10.5281/zenodo.17228903) 
 - [[ATHENA Overview]]
 ### Dwarf Galaxy versus Stellar Cluster
-Dwarf galaxies, the smallest [[Galaxy|galaxies]], provide an excellent "laboratory" to study both galaxies and [[Dark Matter|dark matter]]. Based on the smallest galaxies that we can find we are able to place constraints on dark matter as different proposed models expect different ranges in size. With [Dr. Andrey Kravstov](https://astro.uchicago.edu/~andrey/) at the University of Chicago I am running [[N-body Simulation|N-body simulations]] of a potential dwarf galaxy, Ursa Major III / UNIONS 1. We are looking for an observable [[Stellar Stream|stellar stream]] from which we would be able to determine if it is indeed the smallest dwarf galaxy ever found.
+Dwarf galaxies, the smallest [[Galaxy|galaxies]], provide an excellent "laboratory" to study both galaxies and [[Dark Matter|dark matter]]. Based on characteristics of these galaxies like their mass, [[Luminosity|luminosities]], or what stars are present we can place constraints on different models of dark matter. These constraints will help us eliminate certain models and narrow the possibilities that need to be tested. With [Dr. Andrey Kravstov](https://astro.uchicago.edu/~andrey/) at the University of Chicago I am running [[N-body Simulation|N-body simulations]] of a potential dwarf galaxy, Ursa Major III / UNIONS 1. We are looking for an observable [[Stellar Stream|stellar stream]] from which we would be able to determine if it is indeed the smallest dwarf galaxy ever found.
 
 ## Navigating the Website
 I also am trying to make my website as accessible as possible to people from a broad range of backgrounds. You have probably noticed links like [[index|Example Link]] which take you to different pages within the website much like Wikipedia. Additionally, if you are on a computer you can just hover over these links to get a quick look! 
@@ -53,7 +53,7 @@ I've tried to provide definitions, illustrations, videos, and links to additiona
 >[!lay]+ For everyone!
 > These blocks indicate the information is for people of any background. Expect more digestible explanations that leave out the more technical details/nuances. They also might include longer descriptions of plots or results to help everyone learn.
 
->[!general]+ For someone looking for some more technical details
+>[!general]+ Slightly more technical
 > These blocks indicate that the topics will contain more complex material, often more jargon or equations. They are intended for an audience with background in astrophysics but not so difficult to scare anyone off. So if you're interested in a particular topic definitely check these out too!
 
 ## Contact
