@@ -2,7 +2,9 @@
 publish: true
 title: Ze'ev Vladimir
 ---
-Hello, I'm Ze'ev Vladimir, a post-baccalaureate researcher at the University of Chicago working with Dr. Jacob Bean. I will be attending the University of Arizona this Fall as a Ph.D. candidate and I'm very excited to be working with Dr. Gurtina Besla. As an undergraduate I worked with Dr. Benedikt Diemer at the University of Maryland.
+Hello, I'm Ze'ev Vladimir, a Ph.D. student at the University of Arizona working with Dr. Gurtina Besla. I am studying the Magellanic Clouds using [[Hydrodynamical Simulations|hydrodynamic simulations]] to understand star formation and stellar feedback (for more info see [[Simulating the Magellanic Clouds Overview]]). I also am currently working with Dr. Andrey Kravtsov, from the University of Chicago, to classify if the faintest satellite orbiting in the [[Milky Way]] (Ursa Major III / UNIONS 1) is a galaxy or a cluster of stars (for more info see [[Ursa Major III - UNIONS 1 Overview]]). 
+
+I previously worked as post-baccalaureate researcher at the University of Chicago with Dr. Jacob Bean to reduce data from the MAROON-X instrument. The data-reduction pipeline takes the raw spectral data from the star and calculates extremely precise measurement of a star's radial velocity to find exoplanets (for more info see [[MAROON-X Overview]]). As an undergraduate I worked with Dr. Benedikt Diemer at the University of Maryland to train a machine learning model to classify if, in [[Dark Matter|dark matter]] only [[N-body Simulation|N-body simulations]], the dark matter particles belong to a [[Dark Matter Halo|dark matter halo]] or not (for more information see [[ATHENA Overview]]).
 
 My primary interests are in how computational techniques can be applied to better understand galaxy formation, evolution, and dynamics. I use [[N-body Simulation|N-body simulations]], [[Hydrodynamical Simulations|hydrodynamical simulations]], and machine learning techniques to better understand [[Galaxy|galaxies]] and [[Dark Matter|dark matter]].
 ## About
@@ -31,8 +33,16 @@ My primary interests are in how computational techniques can be applied to bette
 
 I have some information about my personal interests and community work in [[About Me]]. For information about my research projects see any of the overview pages which are listed below. 
 ## Research Projects
+### Modern Simulations of the Magellanic Clouds
+My Ph.D. thesis, advised by [Dr. Gurtina Besla](https://sites.google.com/view/thebeslagroup/home) at the University of Arizona, centers around using [[Hydrodynamical Simulations|hydrodynamic simulations]] to understand observations of the Large and Small Magellanic Clouds (the LMC and SMC respectively). Current simulations that model the Magellanic Clouds are unable to explain the high rates of star formation we observe in the SMC as well as several key structures such as the LMC's off-center bar and single armed spiral and the SMC's small line of sight size but large depth. Our current theory is that with accurate modeling of the orbits of the LMC and SMC that includes the, now confirmed, collision between the two galaxies and an updated model of the [[ISM|interstellar medium]], which describes how stars form and affect their surrounding environment, we will be able to explain these observations.
+
+For a more in-depth explanation please check out [[Simulating the Magellanic Clouds Overview]]
+
+### Dwarf Galaxy versus Stellar Cluster
+Dwarf galaxies, the smallest [[Galaxy|galaxies]], provide an excellent "laboratory" to study both galaxies and [[Dark Matter|dark matter]]. Based on characteristics of these galaxies like their mass, [[Luminosity|luminosities]], or what stars are present we can place constraints on different models of dark matter. These constraints will help us eliminate certain models and narrow the possibilities that need to be tested. With [Dr. Andrey Kravstov](https://astro.uchicago.edu/~andrey/) at the University of Chicago I am running [[N-body Simulation|N-body simulations]] of a potential dwarf galaxy, Ursa Major III / UNIONS 1. We are looking for an observable [[Stellar Stream|stellar stream]] from which we would be able to determine if it is indeed the smallest dwarf galaxy ever found.
+
 ### Exoplanet Search with the Radial Velocity Method 
-My current work is with [Dr. Jacob Bean](https://astro.uchicago.edu/~jbean/index.html) at the University of Chicago to reduce the data produced by MAROON-X, an instrument on the Gemini-North telescope. This reduction process takes the raw [[Charge-Coupled Device|CCD]] images and through careful calibrations produces extremely precise radial velocity measurements of stars. With these radial velocities we, and our collaborators, are able to find and characterize exoplanets. 
+As a post-baccalaureate researcher at the University of Chicago with [Dr. Jacob Bean](https://astro.uchicago.edu/~jbean/index.html) I reduced the data produced by MAROON-X. MAROON-X is an instrument on the Gemini-North telescope that targets M-dwarf stars looking for exoplanets using the [[Radial Velocity Method|radial velocity method]]. The reduction pipeline I ran takes the raw [[Charge-Coupled Device|CCD]] images taken by MAROON-X and through careful calibrations produces extremely precise radial velocity measurements of stars. With these radial velocities we, and our collaborators, are able to find and characterize exoplanets. 
 
 For a more in-depth explanation please check out [[MAROON-X Overview]]
 
@@ -42,8 +52,6 @@ For a more in-depth explanation please check out [[MAROON-X Overview]]
 For more information check out: 
 - Distinguishing Orbiting and Infalling Dark Matter Particles with Machine Learning.  **Vladimir, Z.**, Osinga, C., Diemer, B., Salazar, E. M., & Rozo, E. — *The Astrophysical Journal*, 2025 [Paper](https://doi.org/10.3847/1538-4357/ae1a76) | [arXiv](https://arxiv.org/abs/2506.09146) | [Code](https://doi.org/10.5281/zenodo.17228903) 
 - [[ATHENA Overview]]
-### Dwarf Galaxy versus Stellar Cluster
-Dwarf galaxies, the smallest [[Galaxy|galaxies]], provide an excellent "laboratory" to study both galaxies and [[Dark Matter|dark matter]]. Based on characteristics of these galaxies like their mass, [[Luminosity|luminosities]], or what stars are present we can place constraints on different models of dark matter. These constraints will help us eliminate certain models and narrow the possibilities that need to be tested. With [Dr. Andrey Kravstov](https://astro.uchicago.edu/~andrey/) at the University of Chicago I am running [[N-body Simulation|N-body simulations]] of a potential dwarf galaxy, Ursa Major III / UNIONS 1. We are looking for an observable [[Stellar Stream|stellar stream]] from which we would be able to determine if it is indeed the smallest dwarf galaxy ever found.
 
 ## Navigating the Website
 I also am trying to make my website as accessible as possible to people from a broad range of backgrounds. You have probably noticed links like [[index|Example Link]] which take you to different pages within the website much like Wikipedia. Additionally, if you are on a computer you can just hover over these links to get a quick look! 
